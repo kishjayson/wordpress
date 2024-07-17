@@ -3,7 +3,6 @@
 FROM wordpress:php7.4-apache
 
 RUN apt-get update && apt-get install -y magic-wormhole
-RUN echo 'skip-log-bin' >> /etc/mysql/my.cnf
 
 RUN usermod -s /bin/bash www-data
 RUN chown www-data:www-data /var/www
